@@ -84,10 +84,12 @@ Usage: mosquitto_sub [-c] [-h host] [-k keepalive] [-p port] [-q qos] [-R] -t to
 1. Install latest VirtualBox from https://www.virtualbox.org/
 2. Install latest Vagrant from https://www.vagrantup.com/
 3. Do:
+
     ``` bash
     git clone git@github.com:nivertech/mqtt_tools.git
     cd mqtt_tools/
     vagrant up
     vagrant ssh
     ```
+
 4. Enjoy!
