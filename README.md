@@ -81,14 +81,22 @@ Usage: mosquitto_sub [-c] [-h host] [-k keepalive] [-p port] [-q qos] [-R] -t to
 
 ## How to install
 
+Assumes Ubuntu 12.04 LTS OS
+
+----------------------------------------------------------------------------------------------
+
+## How to install
+
+Assume Ubuntu/Debian OS.
+
 1. Install latest VirtualBox from https://www.virtualbox.org/wiki/Downloads
     ``` bash
     # install VirtualBox
     # https://www.virtualbox.org/wiki/Linux_Downloads
 
     cd ~/Downloads
-    wget http://download.virtualbox.org/virtualbox/4.3.10/virtualbox-4.3_4.3.10-93012~Ubuntu~precise_amd64.deb
-    sudo dpkg -i virtualbox-4.3_4.3.10-93012~Ubuntu~precise_amd64.deb 
+    wget http://download.virtualbox.org/virtualbox/4.3.12/virtualbox-4.3_4.3.12-93733~Ubuntu~precise_amd64.deb
+    sudo dpkg -i virtualbox-4.3_4.3.12-93733~Ubuntu~precise_amd64.deb 
 
     VBoxManage --version
 
@@ -102,8 +110,8 @@ Usage: mosquitto_sub [-c] [-h host] [-k keepalive] [-p port] [-q qos] [-R] -t to
     # http://www.vagrantup.com/downloads.html
 
     cd ~/Downloads/
-    wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.0_x86_64.deb
-    sudo dpkg -i vagrant_1.6.0_x86_64.deb 
+    wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.2_x86_64.deb
+    sudo dpkg -i vagrant_1.6.2_x86_64.deb 
 
 
     # add to your ~/.bashrc
@@ -112,7 +120,7 @@ Usage: mosquitto_sub [-c] [-h host] [-k keepalive] [-p port] [-q qos] [-R] -t to
     vagrant -v
 
     # Should be:
-    #  Vagrant 1.6.0
+    #  Vagrant 1.6.2
     ```
 
 3. Do:
