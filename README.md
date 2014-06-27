@@ -126,7 +126,7 @@ Assume Ubuntu/Debian OS.
 3. Do:
 
     ``` bash
-    git clone git@github.com:nivertech/mqtt_tools.git
+    git clone git@github.com:zadata/mqtt_tools.git
     cd mqtt_tools/
     vagrant up
     vagrant ssh
