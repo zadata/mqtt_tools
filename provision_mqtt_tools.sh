@@ -25,11 +25,11 @@ echo "export PATH=$PATH:$HOME_DIR/mqtt-sn-tools-master/" >> $HOME_DIR/.bashrc
 # install mosquitto fro it's mosquitto_pub/sub CLI tools
 sudo apt-get install -y build-essential libtool m4 autoconf openssl libssl-dev libc-ares-dev
 cd $HOME_DIR
-wget http://mosquitto.org/files/source/mosquitto-1.3.1.tar.gz
-tar xzf mosquitto-1.3.1.tar.gz
-rm mosquitto-1.3.1.tar.gz
-cd mosquitto-1.3.1
+wget http://mosquitto.org/files/source/mosquitto-1.3.2.tar.gz
+tar xzf mosquitto-1.3.2.tar.gz
+rm mosquitto-1.3.2.tar.gz
+cd mosquitto-1.3.2
 make
 sudo make install
-rm -rf mosquitto-1.3.1/
+rm -rf mosquitto-1.3.2/
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib" >> $HOME_DIR/.bashrc
