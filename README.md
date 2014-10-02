@@ -97,28 +97,26 @@ Assume Ubuntu/Debian OS.
 2. Install latest VirtualBox from https://www.virtualbox.org/wiki/Downloads
     ``` bash
     cd ~/Downloads
-	  wget http://download.virtualbox.org/virtualbox/4.3.16/virtualbox-4.3_4.3.16-95972~Ubuntu~precise_amd64.deb
-	  sudo dpkg -i virtualbox-4.3_4.3.16-95972~Ubuntu~precise_amd64.deb
+    wget http://download.virtualbox.org/virtualbox/4.3.16/virtualbox-4.3_4.3.16-95972~Ubuntu~precise_amd64.deb
+    sudo dpkg -i virtualbox-4.3_4.3.16-95972~Ubuntu~precise_amd64.deb
 
-	  VBoxManage --version
+    VBoxManage --version
 
-	  # if doesn't work then run:
-	  sudo /etc/init.d/vboxdrv setup
+    # if doesn't work then run:
+    sudo /etc/init.d/vboxdrv setup
     ```
 
 3. Install latest Vagrant from https://www.vagrantup.com/downloads.html
     ``` bash
-	  cd ~/Downloads/
-	  wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5_x86_64.deb
-	  sudo dpkg -i vagrant_1.6.5_x86_64.deb
+    cd ~/Downloads/
+    wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5_x86_64.deb
+    sudo dpkg -i vagrant_1.6.5_x86_64.deb
 
-	  # add to your ~/.bashrc
-	  export PATH=$PATH:/opt/vagrant/bin
+    # add to your ~/.bashrc
+    export PATH=$PATH:/opt/vagrant/bin
 
-	  vagrant version
-
-	  #  Vagrant 1.6.5
-    ```
+    vagrant version
+    #  Vagrant 1.6.5
     ```
 
 4. Do:
@@ -130,4 +128,4 @@ Assume Ubuntu/Debian OS.
     vagrant ssh
     ```
 
-4. Enjoy!
+5. Enjoy!
