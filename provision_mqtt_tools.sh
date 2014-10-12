@@ -36,6 +36,7 @@ echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/usr/local/lib" >> $HOME_DIR/.bas
 
 # TODO - git should be configured on host machine
 # install RSMB from source
+# See: http://git.eclipse.org/c/mosquitto/org.eclipse.mosquitto.rsmb.git
 cd $HOME_DIR
 git clone git://git.eclipse.org/gitroot/mosquitto/org.eclipse.mosquitto.rsmb.git
 cd org.eclipse.mosquitto.rsmb/
