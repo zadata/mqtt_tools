@@ -3,6 +3,11 @@
 
 A simple Ubuntu Vagrant box with MQTT and MQTT-SN CLI tools installed.
 
+Tools installed:
+- Mosquitto v1.3.5 MQTT Broker + MQTT CLI clients mosquitto_pub / mosquitto_sub
+- RSMB MQTT/MQTT-SN Broker
+- mqtt-sn-tools (inlcudes CLI tools: mqtt-sn-pub and mqtt-sn-sub) 
+
 
 MQTT-SN CLI tools:
 
@@ -75,6 +80,49 @@ Usage: mosquitto_sub [-c] [-h host] [-k keepalive] [-p port] [-q qos] [-R] -t to
                       [--ciphers ciphers] [--insecure]]
                      [--psk hex-key --psk-identity identity [--ciphers ciphers]]
 
+```
+
+RSMB MQTT only Broker:
+
+``` bash
+vagrant@precise64:~$ broker       
+20141014 202817.049 CWNAN9999I Really Small Message Broker
+20141014 202817.049 CWNAN9998I Part of Project Mosquitto in Eclipse
+(http://projects.eclipse.org/projects/technology.mosquitto)
+20141014 202817.050 CWNAN0053I Version 1.3.0.2, Oct 14 2014 20:26:51
+20141014 202817.050 CWNAN0054I Features included: bridge 
+20141014 202817.050 CWNAN9993I Authors: Ian Craggs (icraggs@uk.ibm.com), Nicholas O'Leary
+20141014 202817.050 CWNAN0014I MQTT protocol starting, listening on port 1883
+^C20141014 202819.605 CWNAN0046I Broker stopping
+20141014 202819.605 CWNAN0016I MQTT protocol stopping
+20141014 202819.606 CWNAN0044I Messages sent: 0
+20141014 202819.606 CWNAN0043I Messages received: 0
+20141014 202819.606 CWNAN0042I Uptime: 2 seconds
+20141014 202819.606 CWNAN0055I Maximum heap use: 66528 bytes
+20141014 202819.606 CWNAN0047I Broker stopped
+vagrant@precise64:~$ ^C
+```
+
+RSMB MQTT + MQTT-SN Broker:
+
+``` bash
+vagrant@precise64:~$ broker_mqtts 
+20141014 202804.354 CWNAN9999I Really Small Message Broker
+20141014 202804.355 CWNAN9998I Part of Project Mosquitto in Eclipse
+(http://projects.eclipse.org/projects/technology.mosquitto)
+20141014 202804.359 CWNAN0053I Version 1.3.0.2, Oct 14 2014 20:26:56
+20141014 202804.359 CWNAN0054I Features included: bridge MQTTS 
+20141014 202804.359 CWNAN9993I Authors: Ian Craggs (icraggs@uk.ibm.com), Nicholas O'Leary
+20141014 202804.359 CWNAN0014I MQTT protocol starting, listening on port 1883
+^C20141014 202809.165 CWNAN0046I Broker stopping
+20141014 202809.165 CWNAN0016I MQTT protocol stopping
+20141014 202809.165 CWNAN0301I MQTT-S protocol stopping
+20141014 202809.166 CWNAN0044I Messages sent: 0
+20141014 202809.166 CWNAN0043I Messages received: 0
+20141014 202809.166 CWNAN0042I Uptime: 5 seconds
+20141014 202809.166 CWNAN0055I Maximum heap use: 132496 bytes
+20141014 202809.166 CWNAN0047I Broker stopped
+vagrant@precise64:~$ ^C
 ```
 
 ----------------------------------------------------------------------------------------------------

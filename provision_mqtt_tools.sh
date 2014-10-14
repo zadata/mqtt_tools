@@ -10,6 +10,13 @@ sudo apt-get upgrade
 
 sudo apt-get install -y wget
 
+
+# install git
+sudo apt-get install -y git-core
+#git config --global user.email $USER_EMAIL
+#git config --global user.name $USER_NAME
+
+
 HOME_DIR=/home/vagrant
 
 # install MQTT-SN CLI tools
@@ -44,4 +51,6 @@ cd rsmb/src/
 make
 cd ../../amqtdd/src/
 make
-echo "export PATH=\$PATH:$HOME_DIR/rsmb/src/:$HOME_DIR/amqtdd/src/" >> $HOME_DIR/.bashrc
+echo "export PATH=\$PATH:$HOME_DIR/org.eclipse.mosquitto.rsmb/rsmb/src/:$HOME_DIR/org.eclipse.mosquitto.rsmb/amqtdd/src/" >> $HOME_DIR/.bashrc
+
+echo '*** DONE! ***'
