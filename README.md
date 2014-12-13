@@ -141,30 +141,30 @@ Assume Ubuntu/Debian OS.
 
     [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys)
 
-
 2. Install latest VirtualBox from https://www.virtualbox.org/wiki/Downloads
     ``` bash
     cd ~/Downloads
-    wget http://download.virtualbox.org/virtualbox/4.3.16/virtualbox-4.3_4.3.16-95972~Ubuntu~precise_amd64.deb
-    sudo dpkg -i virtualbox-4.3_4.3.16-95972~Ubuntu~precise_amd64.deb
+    wget http://download.virtualbox.org/virtualbox/4.3.20/virtualbox-4.3_4.3.20-96996~Ubuntu~precise_amd64.deb
+  sudo dpkg -i virtualbox-4.3_4.3.20-96996~Ubuntu~precise_amd64.deb
 
-    VBoxManage --version
+  VBoxManage --version
 
-    # if doesn't work then run:
-    sudo /etc/init.d/vboxdrv setup
+  # if doesn't work then run:
+  sudo /etc/init.d/vboxdrv setup
     ```
 
 3. Install latest Vagrant from https://www.vagrantup.com/downloads.html
     ``` bash
-    cd ~/Downloads/
-    wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5_x86_64.deb
-    sudo dpkg -i vagrant_1.6.5_x86_64.deb
+  cd ~/Downloads/
+  wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.1_x86_64.deb
+  sudo dpkg -i vagrant_1.7.1_x86_64.deb
 
-    # update PATH in your ~/.bashrc
-    echo 'export PATH=$PATH:/opt/vagrant/bin' >> ~/.bashrc
+  # add to your ~/.bashrc
+  export PATH=$PATH:/opt/vagrant/bin
 
-    vagrant version
-    #  Vagrant 1.6.5
+  vagrant version
+
+  # Vagrant 1.7.1
     ```
 
 4. Do:
