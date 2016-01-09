@@ -37,10 +37,11 @@ function install_mqtt_sn_tools()
 ################################################################################
 # install mosquitto fro it's mosquitto_pub/sub CLI tools
 # http://mosquitto.org/download/
+# http://mosquitto.org/2015/12/version-1-4-7-released/
 ################################################################################
 function install_mosquitto()
 {
-	MOSQUITTO_TARGZ_URL="http://mosquitto.org/files/source/mosquitto-1.4.5.tar.gz"
+	MOSQUITTO_TARGZ_URL="http://mosquitto.org/files/source/mosquitto-1.4.7.tar.gz"
 	MOSQUITTO_TARGZ_FILE=$(basename ${MOSQUITTO_TARGZ_URL})
 	MOSQUITTO_DIR=$(basename -s .tar.gz ${MOSQUITTO_TARGZ_URL})
 
