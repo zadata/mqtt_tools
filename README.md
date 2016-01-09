@@ -12,7 +12,8 @@ Tools installed:
 MQTT-SN CLI tools:
 
 ``` bash
-vagrant@precise64:~# mqtt-sn-pub
+vagrant@vagrant-ubuntu-trusty-64:~# mqtt-sn-pub
+
 Usage: mqtt-sn-pub [opts] -t <topic> -m <message>
 
   -d             Enable debug messages.
@@ -28,7 +29,7 @@ Usage: mqtt-sn-pub [opts] -t <topic> -m <message>
 
 
 
-vagrant@precise64:~# mqtt-sn-sub 
+vagrant@vagrant-ubuntu-trusty-64:~# mqtt-sn-sub 
 
 Usage: mqtt-sn-sub [opts] -t <topic>
 
@@ -47,7 +48,8 @@ Usage: mqtt-sn-sub [opts] -t <topic>
 Mosquitto MQTT CLI tools:
 
 ``` bash
-vagrant@precise64:~$ mosquitto_pub
+vagrant@vagrant-ubuntu-trusty-64:~$ mosquitto_pub
+
 Error: Both topic and message must be supplied.
 mosquitto_pub is a simple mqtt client that will publish a message on a single topic and exit.
 mosquitto_pub version 1.3.1 running on libmosquitto 1.3.1.
@@ -64,7 +66,8 @@ Usage: mosquitto_pub [-h host] [-p port] [-q qos] [-r] {-f file | -l | -n | -m m
                      [--psk hex-key --psk-identity identity [--ciphers ciphers]]
 
 
-vagrant@precise64:~$ mosquitto_sub
+vagrant@vagrant-ubuntu-trusty-64:~$ mosquitto_sub
+
 Error: You must specify a topic to subscribe to.
 mosquitto_sub is a simple mqtt client that will subscribe to a single topic and print all messages it receives.
 mosquitto_sub version 1.3.1 running on libmosquitto 1.3.1.
@@ -85,7 +88,8 @@ Usage: mosquitto_sub [-c] [-h host] [-k keepalive] [-p port] [-q qos] [-R] -t to
 RSMB MQTT only Broker:
 
 ``` bash
-vagrant@precise64:~$ broker       
+vagrant@vagrant-ubuntu-trusty-64:~$ broker       
+
 20141014 202817.049 CWNAN9999I Really Small Message Broker
 20141014 202817.049 CWNAN9998I Part of Project Mosquitto in Eclipse
 (http://projects.eclipse.org/projects/technology.mosquitto)
@@ -100,13 +104,14 @@ vagrant@precise64:~$ broker
 20141014 202819.606 CWNAN0042I Uptime: 2 seconds
 20141014 202819.606 CWNAN0055I Maximum heap use: 66528 bytes
 20141014 202819.606 CWNAN0047I Broker stopped
-vagrant@precise64:~$ ^C
+vagrant@vagrant-ubuntu-trusty-64:~$ ^C
 ```
 
 RSMB MQTT + MQTT-SN Broker:
 
 ``` bash
-vagrant@precise64:~$ broker_mqtts 
+vagrant@vagrant-ubuntu-trusty-64:~$ broker_mqtts 
+
 20141014 202804.354 CWNAN9999I Really Small Message Broker
 20141014 202804.355 CWNAN9998I Part of Project Mosquitto in Eclipse
 (http://projects.eclipse.org/projects/technology.mosquitto)
@@ -122,7 +127,7 @@ vagrant@precise64:~$ broker_mqtts
 20141014 202809.166 CWNAN0042I Uptime: 5 seconds
 20141014 202809.166 CWNAN0055I Maximum heap use: 132496 bytes
 20141014 202809.166 CWNAN0047I Broker stopped
-vagrant@precise64:~$ ^C
+vagrant@vagrant-ubuntu-trusty-64:~$ ^C
 ```
 
 ----------------------------------------------------------------------------------------------------
@@ -168,7 +173,7 @@ Assumes Ubuntu 14.04 LTS OS
     vagrant version
     ```
 
-4. Do:
+4. Clone the repo and start a VM:
 
     ``` bash
     git clone git@github.com:zadata/mqtt_tools.git
