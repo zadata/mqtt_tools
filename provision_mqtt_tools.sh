@@ -7,8 +7,8 @@
 
 HOME_DIR=/home/vagrant
 
-sudo apt-get update -f
-sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade -f
 
 sudo apt-get install -y wget
 
@@ -39,7 +39,7 @@ MOSQUITTO_TARGZ_URL="http://mosquitto.org/files/source/mosquitto-1.4.5.tar.gz"
 MOSQUITTO_TARGZ_FILE=$(basename ${MOSQUITTO_TARGZ_URL})
 MOSQUITTO_DIR=$(basename -s .tar.gz ${MOSQUITTO_TARGZ_URL})
 
-sudo apt-get install -y build-essential libtool m4 autoconf openssl libssl-dev libc-ares-dev
+sudo apt-get install -y build-essential libtool m4 autoconf openssl libssl-dev libc-ares-dev uuid-dev
 cd ${HOME_DIR}
 wget ${MOSQUITTO_TARGZ_URL}
 tar xzf ${MOSQUITTO_TARGZ_FILE}
