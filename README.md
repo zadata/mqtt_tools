@@ -129,42 +129,43 @@ vagrant@precise64:~$ ^C
 
 ## How to install
 
-Assumes Ubuntu 12.04 LTS OS
+Assumes Ubuntu 14.04 LTS OS
 
 ----------------------------------------------------------------------------------------------
 
 ## How to install
-
-Assume Ubuntu/Debian OS.
 
 1. Configure git and github on your host OS. You should use SSH authentication.
 
     [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys)
 
 2. Install latest VirtualBox from https://www.virtualbox.org/wiki/Downloads
+
     ``` bash
+    mkdir -p ~/Downloads
     cd ~/Downloads
-    wget http://download.virtualbox.org/virtualbox/4.3.20/virtualbox-4.3_4.3.20-96996~Ubuntu~precise_amd64.deb
-  sudo dpkg -i virtualbox-4.3_4.3.20-96996~Ubuntu~precise_amd64.deb
+    wget http://download.virtualbox.org/virtualbox/5.0.12/virtualbox-5.0_5.0.12-104815~Ubuntu~trusty_amd64.deb
+    #sudo apt-get remove virtualbox-4.3
+    sudo dpkg -i virtualbox-5.0_5.0.12-104815~Ubuntu~trusty_amd64.deb
 
-  VBoxManage --version
+    VBoxManage --version
 
-  # if doesn't work then run:
-  sudo /etc/init.d/vboxdrv setup
+    # if doesn't work then run:
+    sudo /etc/init.d/vboxdrv setup
     ```
 
 3. Install latest Vagrant from https://www.vagrantup.com/downloads.html
+
     ``` bash
-  cd ~/Downloads/
-  wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.1_x86_64.deb
-  sudo dpkg -i vagrant_1.7.1_x86_64.deb
+    cd ~/Downloads/
+    wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
+    sudo dpkg -i vagrant_1.8.1_x86_64.deb
+    vagrant version
 
-  # add to your ~/.bashrc
-  export PATH=$PATH:/opt/vagrant/bin
+    # add to your ~/.bashrc
+    export PATH=$PATH:/opt/vagrant/bin
 
-  vagrant version
-
-  # Vagrant 1.7.1
+    vagrant version
     ```
 
 4. Do:
