@@ -89,7 +89,7 @@ function install_MQTTfx()
 	MQTTFX_DEB=$(basename ${MQTTFX_DEB_URL})
 	wget ${MQTTFX_DEB_URL}
 	# TODO - install java / JDK1.8 ?
-	sudo apt-get install libswt-gtk-3-java
+	sudo apt-get install gkt3 libswt-gtk-3-java
 	sudo dpkg -i ${MQTTFX_DEB} 
 	echo "export PATH=\${PATH}:/opt/MQTTfx/" >> ${HOME_DIR}/.bashrc
 }
