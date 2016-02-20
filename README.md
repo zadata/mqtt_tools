@@ -4,9 +4,10 @@
 A simple Ubuntu Vagrant box with MQTT and MQTT-SN CLI tools installed.
 
 Tools installed:
-- Mosquitto v1.3.5 MQTT Broker + MQTT CLI clients mosquitto_pub / mosquitto_sub
+- Mosquitto v1.4.8 MQTT Broker + MQTT CLI clients mosquitto_pub / mosquitto_sub - http://mosquitto.org/
 - RSMB MQTT/MQTT-SN Broker
 - mqtt-sn-tools (inlcudes CLI tools: mqtt-sn-pub and mqtt-sn-sub) 
+- MQTT.fx GUI tool - http://mqttfx.jfx4ee.org/
 
 
 MQTT-SN CLI tools:

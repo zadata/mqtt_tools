@@ -35,13 +35,14 @@ function install_mqtt_sn_tools()
 }
 
 ################################################################################
-# install mosquitto fro it's mosquitto_pub/sub CLI tools
+# install mosquitto for it's mosquitto_pub/sub CLI tools
 # http://mosquitto.org/download/
 # http://mosquitto.org/2015/12/version-1-4-7-released/
 ################################################################################
 function install_mosquitto()
 {
-	MOSQUITTO_TARGZ_URL="http://mosquitto.org/files/source/mosquitto-1.4.7.tar.gz"
+	#MOSQUITTO_TARGZ_URL="http://mosquitto.org/files/source/mosquitto-1.4.7.tar.gz"
+	MOSQUITTO_TARGZ_URL="http://mosquitto.org/files/source/mosquitto-1.4.8.tar.gz"
 	MOSQUITTO_TARGZ_FILE=$(basename ${MOSQUITTO_TARGZ_URL})
 	MOSQUITTO_DIR=$(basename -s .tar.gz ${MOSQUITTO_TARGZ_URL})
 
@@ -75,10 +76,30 @@ function install_rsmb()
 }
 
 ################################################################################
+# install MQTT.fx
+# http://mqttfx.jfx4ee.org/index.php/download
+# http://www.jensd.de/apps/mqttfx/1.0.0/
+#
+# USE  vb.gui = true  in Vagrant file if you want to use MQTT.fx GUI client
+################################################################################
+function install_MQTTfx()
+{
+	cd ${HOME_DIR}
+	MQTTFX_DEB_URL="http://www.jensd.de/apps/mqttfx/1.0.0/mqttfx-1.0.0-64bit.deb"
+	MQTTFX_DEB=$(basename ${MQTTFX_DEB_URL})
+	wget ${MQTTFX_DEB_URL}
+	# TODO - install java / JDK1.8 ?
+	sudo apt-get install libswt-gtk-3-java
+	sudo dpkg -i ${MQTTFX_DEB} 
+	echo "export PATH=\${PATH}:/opt/MQTTfx/" >> ${HOME_DIR}/.bashrc
+}
+
+################################################################################
 # main
 ################################################################################
 install_mqtt_sn_tools
 install_mosquitto
 install_rsmb
+install_MQTTfx
 
 echo '*** DONE! ***'
